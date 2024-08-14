@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+}
+
+#display {
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    direction: rtl;
+}
+
+#numbers div,
+#operators div,
+#equal div,
+#clear div {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#numbers div:hover,
+#operators div:hover,
+#equal div:hover,
+#clear div:hover {
+    background-color: #ddd;
+}
+
+#operators {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#equal,
+#clear {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#equal div,
+#clear div {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#equal div:hover {
+    background-color: #45a049;
+}
+
+#clear div {
+    background-color: #f44336;
+}
+
+#clear div:hover {
+    background-color: #e53935;
+}
